@@ -4,6 +4,13 @@ node_js:
 dist: bionic
 sudo: required
 
+notifications:
+  email:
+    recipients:
+      - darius.foo@ncs.com.sg
+    on_success: always
+    on_failure: always
+
 branches:
   only:
    - master
@@ -14,7 +21,7 @@ before_script:
   
 script:
   - ng lint
-  - ng build --prod --base-href https://kenken64.github.io/bitcoin-order-app/
+  - ng build --prod --base-href https://dariusfoo.github.io/bitcoin-order-app/
 
 deploy:
   provider: pages
